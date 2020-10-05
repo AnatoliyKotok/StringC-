@@ -9,3 +9,5 @@ C:\Users\Anatoliy\source\repos\String\String\obj\Debug\netcoreapp3.1\String.Asse
 C:\Users\Anatoliy\source\repos\String\String\obj\Debug\netcoreapp3.1\String.AssemblyInfo.cs
 C:\Users\Anatoliy\source\repos\String\String\obj\Debug\netcoreapp3.1\String.dll
 C:\Users\Anatoliy\source\repos\String\String\obj\Debug\netcoreapp3.1\String.pdb
+C:\Users\Anatoliy\source\repos\String\String\obj\Debug\netcoreapp3.1\String.csproj.CoreCompileInputs.cache
+C:\Users\Anatoliy\source\repos\String\String\obj\Debug\netcoreapp3.1\String.genruntimeconfig.cache

@@ -1,9 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 namespace Stringg
 {
+
+    public struct Pair
+    {
+        public Pair(int counts, string str)
+        {
+            this.Counts = counts;
+            this.Str = str;
+        }
+        public int Counts { get; set; }
+        public string Str { get; set; }
+    };
     class Program
     {
+       
         static void SortByAlfavit(string massege)
         {
             
@@ -87,17 +100,26 @@ namespace Stringg
         {
             string[] words = massege.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             int count = 0;
-            for (int i = 0; i < wordsC.Length; i++)
+            List<Pair> res = new List<Pair>();
+            foreach (var key in wordsC)
             {
-                for (int j = 0; j < words.Length; j++)
+                foreach (var prog in words)
                 {
-                    if (words[j] == wordsC[i])
+                    if (key == prog)
                     {
-                        ++count;
+                        count++;
                     }
                 }
-                Console.WriteLine($"{wordsC[i]}  count={count}");
-                count = 0;
+                if (count != 0)
+                {
+                    res.Add(new Pair(count, key));
+                    count = 0;
+                }
+            }
+            res.Sort((x, y) => y.Counts.CompareTo(x.Counts));
+            foreach (var P in res)
+            {
+                Console.WriteLine(P.Counts + " " + P.Str);
             }
         }
         static void Main(string[] args)
